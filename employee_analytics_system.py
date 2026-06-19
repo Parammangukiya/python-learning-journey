@@ -12,6 +12,12 @@ Features:
 6. Average Experience
 7. Employee Grading
 8. Average Salary by Department
+9. Highest Experience Employee
+10. Lowest Experience Employee
+11. Total Company Salary
+12. Employees with Grade A
+13. Employees with Grade B
+14. Employees with Grade C
 
 Author: Param Mangukiya
 """
@@ -105,7 +111,7 @@ while True:
    print("3. Lowest Paid Employee")
    print("4. Employees with Salary > 40000")
    print("5. Department-wise Employee Count")
-   print("6. Average Experience") # Fixed typo here
+   print("6. Average Experience") 
    print("7. Employee Grading")
    print("8. Average Salary by Department")
    print("9. Highest Experience Employee")
