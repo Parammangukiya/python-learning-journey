@@ -1,221 +1,324 @@
 import pandas as pd
 import numpy as np
 
-#Employee Analytics System
-
 """
 Employee Analytics System
 
 Features:
-1. Average Salary
-2. Highest Paid Employee
-3. Lowest Paid Employee
-4. Salary Filtering
-5. Department-wise Employee Count
-6. Average Experience
-7. Employee Grading
-8. Average Salary by Department
-9. Highest Experience Employee
-10. Lowest Experience Employee
-11. Total Company Salary
-12. Employees with Grade A
-13. Employees with Grade B
-14. Employees with Grade C
+1.  Add Employee
+2.  View Employee Data
+3.  Update Employee
+4.  Delete Employee
+5.  Save to CSV
+6.  Load from CSV
+7.  Average Salary
+8.  Highest Paid Employee
+9.  Lowest Paid Employee
+10. Department-wise Employee Count
+11. Average Experience
+12. Employee Grading Report
+13. Average Salary by Department
+14. Total Company Salary
 15. Department Statistics
 16. Sort Employees by Salary
 17. Sort Employees by Experience
 18. Salary Pivot Report
-19. Above Average Salary Employees
-20. Search Employee by Name
+19. Search Employee by Name
+20. Above Average Salary
+21. Exit
 
 Author: Param Mangukiya
 """
 
-data = {
-    "Employee_ID": [1,2,3,4,5],
-    "Name": ["Rahul","Amit","Riya","Priya","Karan"],
-    "Department": ["IT","HR","IT","Finance","HR"],
-    "Salary": [40000,35000,45000,60000,38000],
-    "Experience": [1,3,4,6,2]
-}
+# ==============================
+# Load Existing Data
+# ==============================
 
-df = pd.DataFrame(data)
+try:
+    df = pd.read_csv("employee.csv")
+    print("Data Loaded Successfully")
+except FileNotFoundError:
+    df = pd.DataFrame(
+        columns=["Employee_ID", "Name", "Department", "Salary", "Experience"]
+    )
+    print("New Database Created")
 
-conditions = [
-    df['Salary'] >= 50000,
-    df['Salary'] >= 40000,
-    df['Salary'] < 40000
-]
 
-choices = ['A', 'B', 'C']
+# ==============================
+# Grade Helper
+# ==============================
 
-df['Grade'] = np.select(
-    conditions,
-    choices,
-    default='C'
-)
+def update_grade():
+    global df
+    if len(df) > 0:
+        df["Grade"] = df["Salary"].apply(
+            lambda x: "A" if x >= 50000 else
+                      "B" if x >= 35000 else
+                      "C"
+        )
+
+update_grade()
+
+
+# ==============================
+# Functions
+# ==============================
+
+def add_employee():
+    global df
+
+    print("\n=== Add Employee ===")
+    employee_id = int(input("Enter Employee ID: "))
+
+    if employee_id in df["Employee_ID"].values:
+        print("Employee ID already exists. Please use a unique ID.")
+        return
+
+    name       = input("Enter Name: ")
+    department = input("Enter Department: ")
+    salary     = int(input("Enter Salary: "))
+    experience = int(input("Enter Experience (years): "))
+
+    new_row = {
+        "Employee_ID": employee_id,
+        "Name":        name,
+        "Department":  department,
+        "Salary":      salary,
+        "Experience":  experience
+    }
+
+    df.loc[len(df)] = new_row
+    update_grade()
+    print("Employee Added Successfully!")
+
+
+def view_employees():
+    print("\n=== Employee Data ===")
+    if df.empty:
+        print("No employee records found.")
+    else:
+        print(df.to_string(index=False))
+
+
+def update_employee():
+    global df
+
+    print("\n=== Update Employee ===")
+    employee_id = int(input("Enter Employee ID to Update: "))
+
+    if employee_id not in df["Employee_ID"].values:
+        print("Employee ID not found.")
+        return
+
+    print("What do you want to update?")
+    print("1. Name")
+    print("2. Department")
+    print("3. Salary")
+    print("4. Experience")
+
+    field_choice = input("Enter choice: ")
+
+    field_map = {
+        "1": "Name",
+        "2": "Department",
+        "3": "Salary",
+        "4": "Experience"
+    }
+
+    if field_choice not in field_map:
+        print("Invalid choice.")
+        return
+
+    field = field_map[field_choice]
+    new_value = input(f"Enter new {field}: ")
+
+    if field in ("Salary", "Experience"):
+        new_value = int(new_value)
+
+    df.loc[df["Employee_ID"] == employee_id, field] = new_value
+    update_grade()
+    print(f"{field} updated successfully!")
+
+
+def delete_employee():
+    global df
+
+    print("\n=== Delete Employee ===")
+    employee_id = int(input("Enter Employee ID to Delete: "))
+
+    if employee_id not in df["Employee_ID"].values:
+        print("Employee ID not found.")
+        return
+
+    df = df[df["Employee_ID"] != employee_id].reset_index(drop=True)
+    update_grade()
+    print("Employee Deleted Successfully!")
+
+
+def save_to_csv():
+    df.to_csv("employee.csv", index=False)
+    print("Data Saved to employee.csv Successfully!")
+
+
+def load_from_csv():
+    global df
+
+    filename = input("Enter CSV filename to load (default: employee.csv): ").strip()
+    if filename == "":
+        filename = "employee.csv"
+
+    try:
+        df = pd.read_csv(filename)
+        update_grade()
+        print(f"Data Loaded from {filename} Successfully!")
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")
+
 
 def average_salary():
- print("\n=== 1. Average Salary ===")
- print(round(df["Salary"].mean(),2))
+    print("\n=== Average Salary ===")
+    print(f"Rs. {round(df['Salary'].mean(), 2)}")
+
 
 def highest_paid_employee():
- print("\n=== 2. Highest Paid Employee ===")
- print(df[df["Salary"] == df["Salary"].max()]["Name"])
+    print("\n=== Highest Paid Employee ===")
+    row = df[df["Salary"] == df["Salary"].max()]
+    print(row[["Employee_ID", "Name", "Department", "Salary"]].to_string(index=False))
+
 
 def lowest_paid_employee():
- print("\n=== 3. Lowest Paid Employee ===")
- print(df[df["Salary"] == df["Salary"].min()]["Name"])
+    print("\n=== Lowest Paid Employee ===")
+    row = df[df["Salary"] == df["Salary"].min()]
+    print(row[["Employee_ID", "Name", "Department", "Salary"]].to_string(index=False))
 
-def salary_filtering():
- print("\n=== 4. Employees with Salary > 40000 ===")
- print(df[df["Salary"]>40000])
 
-def department_wise_employee_count():
- print("\n=== 5. Department-wise Employee Count ===")
- print(df["Department"].value_counts())
+def department_wise_count():
+    print("\n=== Department-wise Employee Count ===")
+    print(df["Department"].value_counts().to_string())
+
 
 def average_experience():
- print("\n=== 6. Average Experience ===")
- print(df["Experience"].mean())
+    print("\n=== Average Experience ===")
+    print(f"{round(df['Experience'].mean(), 2)} years")
 
-def employee_grading():
-    print(df)
+
+def employee_grading_report():
+    print("\n=== Employee Grading Report ===")
+    print(df[["Employee_ID", "Name", "Salary", "Grade"]].to_string(index=False))
+
 
 def average_salary_by_department():
- print("\n=== 8. Average Salary By Department ===")
- print(df.groupby("Department")["Salary"].mean())
+    print("\n=== Average Salary by Department ===")
+    print(df.groupby("Department")["Salary"].mean().round(2).to_string())
 
-def highest_experience_employee():
- print("\n=== 9. Highest Experience Employee ===")
- print(df[df["Experience"] == df["Experience"].max()]["Name"])
-
-def lowest_experience_employee():
- print("\n=== 10. Lowest Experience Employee ===")
- print(df[df["Experience"] == df["Experience"].min()]["Name"])
 
 def total_company_salary():
- print("\n=== 11. Total Company Salary ===")
- print(df["Salary"].sum())
+    print("\n=== Total Company Salary ===")
+    print(f"Rs. {df['Salary'].sum():,}")
 
-def employees_with_grade_a():
- print("\n=== 12. Employees with Grade A ===")
- print(df[df["Grade"] == "A"])
-
-def employees_with_grade_b():
- print("\n=== 13. Employees with Grade B ===")
- print(df[df["Grade"] == "B"])
-
-def employees_with_grade_c():
- print("\n=== 14. Employees with Grade C ===")
- print(df[df["Grade"] == "C"])
 
 def department_statistics():
- print("\n=== 15. Department Statistics ===")
- stats = df.groupby("Department")["Salary"].agg(
-     ["mean","max","min","sum","count"]
- )
-
- print(stats)
+    print("\n=== Department Statistics ===")
+    stats = df.groupby("Department")["Salary"].agg(["mean", "max", "min", "sum", "count"])
+    stats.columns = ["Avg Salary", "Max Salary", "Min Salary", "Total Salary", "Count"]
+    print(stats.round(2).to_string())
 
 
-def sort_salary():
-  print("\n=== 16. Sort Employees by Salary ===")
-  print(df.sort_values("Salary",ascending=False))
-def sort_experience():
-  print("\n=== 17. Sort Employees by Experience ===")
-  print(df.sort_values("Experience",ascending=False))
+def sort_by_salary():
+    print("\n=== Employees Sorted by Salary (High to Low) ===")
+    print(df.sort_values("Salary", ascending=False).to_string(index=False))
+
+
+def sort_by_experience():
+    print("\n=== Employees Sorted by Experience (High to Low) ===")
+    print(df.sort_values("Experience", ascending=False).to_string(index=False))
+
 
 def salary_pivot():
-  print("\n=== 18. Salary Pivot Report ===")
-  print(df.pivot_table(
-      values = "Salary",
-      index = "Department",
-      aggfunc = "mean"
-  ))
+    print("\n=== Salary Pivot Report ===")
+    pivot = df.pivot_table(values="Salary", index="Department", aggfunc="mean").round(2)
+    print(pivot.to_string())
+
+
+def search_by_name():
+    print("\n=== Search Employee by Name ===")
+    name = input("Enter name to search: ")
+    result = df[df["Name"].str.contains(name, case=False, na=False)]
+    if result.empty:
+        print("No employee found with that name.")
+    else:
+        print(result.to_string(index=False))
 
 
 def above_average_salary():
-    avg_salary = df["Salary"].mean()
-    print(
-        df[df["Salary"] > avg_salary]
-    )  
-
-def search_by_name():
-    name = input("Enter name to search: ")
-    print(df[df["Name"].str.contains(name,case=False)]
-          )
+    print("\n=== Employees Above Average Salary ===")
+    avg = df["Salary"].mean()
+    print(f"(Average Salary: Rs. {round(avg, 2)})")
+    result = df[df["Salary"] > avg]
+    print(result.to_string(index=False))
 
 
+# ==============================
+# Main Menu
+# ==============================
+
+menu = """
+====== EMPLOYEE ANALYTICS SYSTEM ======
+1.  Add Employee
+2.  View Employee Data
+3.  Update Employee
+4.  Delete Employee
+5.  Save to CSV
+6.  Load from CSV
+7.  Average Salary
+8.  Highest Paid Employee
+9.  Lowest Paid Employee
+10. Department-wise Employee Count
+11. Average Experience
+12. Employee Grading Report
+13. Average Salary by Department
+14. Total Company Salary
+15. Department Statistics
+16. Sort Employees by Salary
+17. Sort Employees by Experience
+18. Salary Pivot Report
+19. Search Employee by Name
+20. Above Average Salary
+21. Exit
+========================================"""
+
+actions = {
+    "1":  add_employee,
+    "2":  view_employees,
+    "3":  update_employee,
+    "4":  delete_employee,
+    "5":  save_to_csv,
+    "6":  load_from_csv,
+    "7":  average_salary,
+    "8":  highest_paid_employee,
+    "9":  lowest_paid_employee,
+    "10": department_wise_count,
+    "11": average_experience,
+    "12": employee_grading_report,
+    "13": average_salary_by_department,
+    "14": total_company_salary,
+    "15": department_statistics,
+    "16": sort_by_salary,
+    "17": sort_by_experience,
+    "18": salary_pivot,
+    "19": search_by_name,
+    "20": above_average_salary,
+}
 
 while True:
+    print(menu)
+    choice = input("Enter Your Choice: ").strip()
 
-   print("1. Average Salary")
-   print("2. Highest Paid Employee")
-   print("3. Lowest Paid Employee")
-   print("4. Employees with Salary > 40000")
-   print("5. Department-wise Employee Count")
-   print("6. Average Experience") 
-   print("7. Employee Grading")
-   print("8. Average Salary by Department")
-   print("9. Highest Experience Employee")
-   print("10. Lowest Experience Employee")
-   print("11. Total Company Salary")
-   print("12. Employees with Grade A")
-   print("13. Employees with Grade B")
-   print("14. Employees with Grade C")
-   print("15. Department Statistics")
-   print("16. Sort Employees by Salary")
-   print("17. Sort Employees by Experience")
-   print("18. Salary Pivot Report")
-   print("19. Above Average Salary Employees")
-   print("20. Search Employee by Name")
-   print("21. Exit")
-
-   choice = input("Choose: ")
-
-   if choice == "1":
-       average_salary()
-   elif choice == "2":
-      highest_paid_employee()
-   elif choice == "3":
-      lowest_paid_employee() 
-   elif choice == "4":
-      salary_filtering()
-   elif choice == "5":
-     department_wise_employee_count() 
-   elif choice == "6":
-     average_experience()
-   elif choice == "7":
-     employee_grading()
-   elif choice == "8":
-     average_salary_by_department() 
-   elif choice == "9":
-     highest_experience_employee() 
-   elif choice == "10":
-     lowest_experience_employee()
-   elif choice == "11":
-      total_company_salary() 
-   elif choice == "12":
-      employees_with_grade_a() 
-   elif choice == "13":
-      employees_with_grade_b() 
-   elif choice == "14":
-      employees_with_grade_c() 
-   elif choice == "15":
-      department_statistics()
-   elif choice == "16":
-      sort_salary()
-   elif choice == "17":
-      sort_experience()
-   elif choice == "18":
-      salary_pivot()
-   elif choice == "19":
-      above_average_salary()
-   elif choice == "20":
-      search_by_name()
-   elif choice == "21":
-    print("Thank you for using Employee Analytics System!")
-    break
-   else:
-    print("Invalid Choice")
+    if choice == "21":
+        save_to_csv()
+        print("Thank you for using Employee Analytics System!")
+        break
+    elif choice in actions:
+        actions[choice]()
+    else:
+        print("Invalid Choice. Please enter a number between 1 and 21.")
