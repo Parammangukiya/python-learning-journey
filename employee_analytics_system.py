@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 #Employee Analytics System
 
 """
@@ -18,11 +21,15 @@ Features:
 12. Employees with Grade A
 13. Employees with Grade B
 14. Employees with Grade C
+15. Department Statistics
+16. Sort Employees by Salary
+17. Sort Employees by Experience
+18. Salary Pivot Report
+19. Above Average Salary Employees
+20. Search Employee by Name
 
 Author: Param Mangukiya
 """
-import pandas as pd
-import numpy as np
 
 data = {
     "Employee_ID": [1,2,3,4,5],
@@ -50,7 +57,7 @@ df['Grade'] = np.select(
 
 def average_salary():
  print("\n=== 1. Average Salary ===")
- print(df["Salary"].mean())
+ print(round(df["Salary"].mean(),2))
 
 def highest_paid_employee():
  print("\n=== 2. Highest Paid Employee ===")
@@ -103,6 +110,43 @@ def employees_with_grade_c():
  print("\n=== 14. Employees with Grade C ===")
  print(df[df["Grade"] == "C"])
 
+def department_statistics():
+ print("\n=== 15. Department Statistics ===")
+ stats = df.groupby("Department")["Salary"].agg(
+     ["mean","max","min","sum","count"]
+ )
+
+ print(stats)
+
+
+def sort_salary():
+  print("\n=== 16. Sort Employees by Salary ===")
+  print(df.sort_values("Salary",ascending=False))
+def sort_experience():
+  print("\n=== 17. Sort Employees by Experience ===")
+  print(df.sort_values("Experience",ascending=False))
+
+def salary_pivot():
+  print("\n=== 18. Salary Pivot Report ===")
+  print(df.pivot_table(
+      values = "Salary",
+      index = "Department",
+      aggfunc = "mean"
+  ))
+
+
+def above_average_salary():
+    avg_salary = df["Salary"].mean()
+    print(
+        df[df["Salary"] > avg_salary]
+    )  
+
+def search_by_name():
+    name = input("Enter name to search: ")
+    print(df[df["Name"].str.contains(name,case=False)]
+          )
+
+
 
 while True:
 
@@ -120,7 +164,13 @@ while True:
    print("12. Employees with Grade A")
    print("13. Employees with Grade B")
    print("14. Employees with Grade C")
-   print("15. Exit")
+   print("15. Department Statistics")
+   print("16. Sort Employees by Salary")
+   print("17. Sort Employees by Experience")
+   print("18. Salary Pivot Report")
+   print("19. Above Average Salary Employees")
+   print("20. Search Employee by Name")
+   print("21. Exit")
 
    choice = input("Choose: ")
 
@@ -129,30 +179,42 @@ while True:
    elif choice == "2":
       highest_paid_employee()
    elif choice == "3":
-      lowest_paid_employee() # Added parentheses
+      lowest_paid_employee() 
    elif choice == "4":
       salary_filtering()
    elif choice == "5":
-     department_wise_employee_count() # Added parentheses and corrected name
+     department_wise_employee_count() 
    elif choice == "6":
      average_experience()
    elif choice == "7":
      employee_grading()
    elif choice == "8":
-     average_salary_by_department() # Added parentheses
+     average_salary_by_department() 
    elif choice == "9":
-     highest_experience_employee() # Added parentheses
+     highest_experience_employee() 
    elif choice == "10":
-     lowest_experience_employee() # Added parentheses
+     lowest_experience_employee()
    elif choice == "11":
-      total_company_salary() # Added parentheses
+      total_company_salary() 
    elif choice == "12":
-      employees_with_grade_a() # Added parentheses
+      employees_with_grade_a() 
    elif choice == "13":
-      employees_with_grade_b() # Added parentheses
+      employees_with_grade_b() 
    elif choice == "14":
-      employees_with_grade_c() # Added parentheses
+      employees_with_grade_c() 
    elif choice == "15":
+      department_statistics()
+   elif choice == "16":
+      sort_salary()
+   elif choice == "17":
+      sort_experience()
+   elif choice == "18":
+      salary_pivot()
+   elif choice == "19":
+      above_average_salary()
+   elif choice == "20":
+      search_by_name()
+   elif choice == "21":
     print("Thank you for using Employee Analytics System!")
     break
    else:
