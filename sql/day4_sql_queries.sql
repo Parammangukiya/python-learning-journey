@@ -6,7 +6,7 @@ SELECT name, salary FROM employees;
 
 SELECT name
 FROM employees
-WHERE departent = 'IT';
+WHERE department = 'IT';
 
 SELECT *
 FROM employees
