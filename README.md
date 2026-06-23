@@ -6,56 +6,72 @@ I'm a B.Tech CSE student currently learning Python, Data Analysis, SQL, AI, and 
 
 ## Topics Learned
 
-* Python Fundamentals
-* Object-Oriented Programming (OOP)
-* NumPy Basics
-* Pandas Basics
-* Data Cleaning with Pandas
-* CSV Handling
-* Exception Handling
-* SQL Basics
+### Python
+- Python Fundamentals
+- Functions
+- Loops
+- OOP (Object-Oriented Programming)
+- Exception Handling
+- File Handling
 
-  * SELECT
-  * WHERE
-  * ORDER BY
-  * COUNT()
-  * SUM()
-  * AVG()
-  * MIN()
-  * MAX()
-  * GROUP BY
-  * HAVING
+### NumPy
+- Arrays
+- Indexing
+- Slicing
+- Mathematical Operations
+
+### Pandas
+- DataFrames
+- CSV Handling
+- Data Cleaning
+- GroupBy
+- Apply
+- Query
+- Value Counts
+- Data Analysis
+
+### SQL Fundamentals
+- SELECT
+- WHERE
+- ORDER BY
+- COUNT
+- SUM
+- AVG
+- MIN
+- MAX
+- GROUP BY
+- HAVING
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
 
 ## Projects
 
 ### Employee Analytics System
-
 Features:
-
-* Average Salary Analysis
-* Highest Paid Employee
-* Lowest Paid Employee
-* Department-wise Analysis
-* Employee Grading
-* Experience Analysis
-* Salary Filtering
-* Company Salary Statistics
+- Average Salary
+- Highest Paid Employee
+- Lowest Paid Employee
+- Department Analysis
+- Employee Grading
+- Experience Analysis
 
 ### Student Management System
-
 Features:
+- Add Student
+- Search Student
+- View Student
+- CSV Support
+- File Handling
 
-* Add Student
-* View Students
-* Search Students
-* CSV Support
-* File Handling
+### SQL Practice
+Files Included:
+- Basic Queries
+- Aggregate Functions
+- Joins
+- Company Management Mini Project
 
-## Current Goal
-
-Build real-world projects and become a better developer every day.
-
-## Current Roadmap Progress
+## Current Roadmap
 
 ✅ Python
 
@@ -65,16 +81,16 @@ Build real-world projects and become a better developer every day.
 
 ✅ SQL Fundamentals
 
-🔄 SQL Joins
-
 🔜 Git & GitHub
 
-🔜 HTML/CSS
+🔜 HTML & CSS
 
 🔜 Flask
 
 🔜 SQLite
 
-🔜 Final Full-Stack Project
+🔜 Final Full Stack Project
 
-🚀 Learning one day at a time.
+## Goal
+
+Build real-world projects and improve as a software developer every day.
