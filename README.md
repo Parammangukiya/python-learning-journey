@@ -4,93 +4,68 @@ Hi, I'm Param Mangukiya.
 
 I'm a B.Tech CSE student currently learning Python, Data Analysis, SQL, AI, and Web Development.
 
-## Topics Learned
+This repository documents my learning journey in Python, SQL, HTML, CSS, and Web Development.
+
+## Completed Topics
 
 ### Python
 - Python Fundamentals
 - Functions
-- Loops
-- OOP (Object-Oriented Programming)
-- Exception Handling
+- OOP
 - File Handling
+- JSON
+- Exception Handling
 
 ### NumPy
 - Arrays
 - Indexing
-- Slicing
-- Mathematical Operations
+- Operations
 
 ### Pandas
 - DataFrames
-- CSV Handling
-- Data Cleaning
+- CSV Files
 - GroupBy
 - Apply
-- Query
-- Value Counts
-- Data Analysis
+- Data Cleaning
 
-### SQL Fundamentals
+### SQL
 - SELECT
 - WHERE
 - ORDER BY
-- COUNT
-- SUM
-- AVG
-- MIN
-- MAX
 - GROUP BY
 - HAVING
-- INNER JOIN
-- LEFT JOIN
-- RIGHT JOIN
+- Aggregate Functions
+- JOINS
+- Mini Company Management Project
+
+### HTML
+- HTML Structure
+- Headings
+- Paragraphs
+- Lists
+- Tables
+- Forms
+- Images
+- Links
+
+### CSS
+- Inline CSS
+- Internal CSS
+- External CSS
+- Classes
+- IDs
+- Colors
+- Borders
+- Padding
+- Margin
+- Flexbox (In Progress)
 
 ## Projects
+- Employee Analytics System
+- Student Management System
+- Company Management SQL Project
+- Personal Portfolio Website
 
-### Employee Analytics System
-Features:
-- Average Salary
-- Highest Paid Employee
-- Lowest Paid Employee
-- Department Analysis
-- Employee Grading
-- Experience Analysis
+More projects will be added as I continue learning.
 
-### Student Management System
-Features:
-- Add Student
-- Search Student
-- View Student
-- CSV Support
-- File Handling
-
-### SQL Practice
-Files Included:
-- Basic Queries
-- Aggregate Functions
-- Joins
-- Company Management Mini Project
-
-## Current Roadmap
-
-✅ Python
-
-✅ NumPy
-
-✅ Pandas
-
-✅ SQL Fundamentals
-
-🔜 Git & GitHub
-
-🔜 HTML & CSS
-
-🔜 Flask
-
-🔜 SQLite
-
-🔜 Final Full Stack Project
-
-## Goal
-
-Build real-world projects and improve as a software developer every day.
+##Build real-world projects and improve as a software developer every day.
