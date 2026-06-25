@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox Practice</title>
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div>Python</div>
+    <div>SQL</div>
+    <div>HTML</div>
+</div>
+
+</body>
+
+</html>
