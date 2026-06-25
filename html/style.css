@@ -1,0 +1,49 @@
+body{
+    background-color:lightyellow;
+}
+
+h1{
+    color:darkred;
+    font-size:60px;
+    font-family:Arial;
+    border: 4px double red ;
+
+    padding :20px;
+    margin: 30px;
+
+    width: 500px;
+    height: 150px;
+    
+}
+img{
+    border: 5px solid blue;
+}
+h2{
+    color:purple;
+    font-family:Verdana;
+    font-style:italic;
+}
+
+p{
+    color:green;
+    font-size:20px;
+    font-family:Verdana;
+}
+table{
+    border:3px dashed green;
+}
+a{
+    text-decoration:none;
+}
+.intro{
+    color:rgb(216, 86, 86);
+    text-decoration: underline;
+    font-size: 35px;
+}
+.name{
+    letter-spacing:15px;
+}
+.container{
+    display:flex;
+    gap:50px;
+}
