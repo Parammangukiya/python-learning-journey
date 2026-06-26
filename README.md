@@ -1,71 +1,114 @@
-# Python Learning Journey
+# 🚀 Python Learning Journey
 
-Hi, I'm Param Mangukiya.
+Hi, I'm **Param Mangukiya** 👋
 
-I'm a B.Tech CSE student currently learning Python, Data Analysis, SQL, AI, and Web Development.
+I'm a **B.Tech Computer Science & Engineering** student passionate about **Software Development, Data Analysis, AI, and Full Stack Web Development**.
 
-This repository documents my learning journey in Python, SQL, HTML, CSS, and Web Development.
+This repository documents my learning journey through Python, SQL, HTML, CSS, and upcoming Full Stack technologies. I regularly build projects to strengthen my programming and problem-solving skills.
 
-## Completed Topics
+---
 
-### Python
-- Python Fundamentals
-- Functions
-- OOP
-- File Handling
-- JSON
-- Exception Handling
+## 🛠️ Technologies & Topics Covered
 
-### NumPy
-- Arrays
-- Indexing
-- Operations
+### 🐍 Python
 
-### Pandas
-- DataFrames
-- CSV Files
-- GroupBy
-- Apply
-- Data Cleaning
+* Python Fundamentals
+* Functions
+* Object-Oriented Programming (OOP)
+* File Handling
+* JSON
+* Exception Handling
 
-### SQL
-- SELECT
-- WHERE
-- ORDER BY
-- GROUP BY
-- HAVING
-- Aggregate Functions
-- JOINS
-- Mini Company Management Project
+### 📊 NumPy
 
-### HTML
-- HTML Structure
-- Headings
-- Paragraphs
-- Lists
-- Tables
-- Forms
-- Images
-- Links
+* Arrays
+* Indexing & Slicing
+* Mathematical Operations
 
-### CSS
-- Inline CSS
-- Internal CSS
-- External CSS
-- Classes
-- IDs
-- Colors
-- Borders
-- Padding
-- Margin
-- Flexbox (In Progress)
+### 📈 Pandas
 
-## Projects
-- Employee Analytics System
-- Student Management System
-- Company Management SQL Project
-- Personal Portfolio Website
+* DataFrames
+* CSV Handling
+* GroupBy
+* Apply & Lambda
+* Data Cleaning
+* Data Analysis
 
-More projects will be added as I continue learning.
+### 🗄️ SQL
 
-##Build real-world projects and improve as a software developer every day.
+* SELECT
+* WHERE
+* ORDER BY
+* GROUP BY
+* HAVING
+* Aggregate Functions
+* JOINS
+* Mini Company Management Project
+
+### 🌐 HTML
+
+* HTML Structure
+* Headings & Paragraphs
+* Lists
+* Tables
+* Forms
+* Images
+* Links
+* Semantic Elements
+
+### 🎨 CSS
+
+* Inline, Internal & External CSS
+* Selectors (Element, Class, ID)
+* Colors & Fonts
+* Margin & Padding
+* Borders
+* Box Model
+* Flexbox
+* Navigation Bar
+* Hero Section
+* Portfolio Layout
+* CSS Animations
+* Transitions
+* Transforms
+* Box Shadow
+* Progress Bars
+
+---
+
+## 💼 Projects
+
+* 📊 Employee Analytics System (Python + Pandas)
+* 🎓 Student Management System (Python)
+* 🗄️ Company Management SQL Project
+* 🌐 Personal Portfolio Website (HTML & CSS)
+
+More real-world projects will be added as I continue my learning journey.
+
+---
+
+## 🎯 Current Roadmap
+
+* ✅ Python
+* ✅ NumPy
+* ✅ Pandas
+* ✅ SQL
+* ✅ HTML
+* ✅ CSS
+* 🔄 Responsive Web Design
+* ⏳ JavaScript
+* ⏳ Flask
+* ⏳ SQLite
+* ⏳ Full Stack Projects
+
+---
+
+## 📈 Current Goal
+
+Build real-world software projects, strengthen problem-solving skills, and become a skilled Full Stack Software Developer.
+
+---
+
+### ⭐ Thank you for visiting my repository!
+
+I'm continuously learning and updating this repository with new concepts and projects.
