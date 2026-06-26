@@ -1,17 +1,22 @@
 body{
     background-color:lightyellow;
 }
-
+.hero{
+    color:darkred;
+    font-size:60px;
+    font-family:Arial;
+    padding :20px;
+    margin: 10px;
+    height: 50px;
+}
 h1{
     color:darkred;
     font-size:60px;
     font-family:Arial;
-    border: 4px double red ;
+    ;
 
-    padding :20px;
-    margin: 30px;
-
-    width: 500px;
+    padding :30px;
+    margin: 100px;
     height: 150px;
     
 }
@@ -26,7 +31,7 @@ h2{
 
 p{
     color:green;
-    font-size:20px;
+    font-size:19px;
     font-family:Verdana;
 }
 table{
@@ -38,12 +43,88 @@ a{
 .intro{
     color:rgb(216, 86, 86);
     text-decoration: underline;
-    font-size: 35px;
+    font-size: 50px;
+    padding: 15px;
+    border:10px double blue;
+    width: 350px;
 }
-.name{
-    letter-spacing:15px;
+.menu a:hover{
+    color:darkred;
+    transition: 0.3s;
 }
 .container{
     display:flex;
     gap:50px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    max-width: 1100px;
+    margin: auto;
+    border: 3px double black;
+    padding: 20px;
+
+}
+
+.profile{
+    border:5px solid black;
+    height: 250px;
+    max-width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.skills{
+    background-color:lightblue;
+    height: 140px;
+    width: 130px;
+    border: 2px solid black;
+}
+.menu a{
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+}
+.logo{
+    font-size:30px;
+    color:darkblue;
+}
+.hobbies{
+    background-color:lightgreen;
+    width: 130px;
+    height: 120px;
+    border: 2px solid black;
+}
+
+.links{
+    background-color:lightpink;
+    border: 2px solid black ;
+    height: 200px;
+}
+.education{
+    display: flex;
+    height: 250px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 30px;
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background-color:rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+.menu{
+    display:flex;
+    gap:35px;
+    list-style:none;
+
 }
