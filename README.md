@@ -2,15 +2,22 @@
 
 Hi, I'm **Param Mangukiya** 👋
 
-I'm a **B.Tech Computer Science & Engineering** student passionate about **Software Development, Data Analysis, AI, and Full Stack Web Development**.
+I'm a **B.Tech Computer Science & Engineering** student passionate about **Software Development, Artificial Intelligence, Data Analysis, and Full Stack Web Development**.
 
-This repository documents my learning journey through Python, SQL, HTML, CSS, and upcoming Full Stack technologies. I regularly build projects to strengthen my programming and problem-solving skills.
+This repository documents my journey from learning programming fundamentals to building real-world projects. Every topic I complete is followed by practical projects to strengthen my problem-solving and development skills.
 
 ---
 
-## 🛠️ Technologies & Topics Covered
+# 🌐 Live Portfolio
 
-### 🐍 Python
+**Portfolio Website:**
+https://paramportfolio-tan.vercel.app/
+
+---
+
+# 🛠️ Skills & Technologies
+
+## 🐍 Python
 
 * Python Fundamentals
 * Functions
@@ -19,13 +26,13 @@ This repository documents my learning journey through Python, SQL, HTML, CSS, an
 * JSON
 * Exception Handling
 
-### 📊 NumPy
+## 📊 NumPy
 
 * Arrays
 * Indexing & Slicing
 * Mathematical Operations
 
-### 📈 Pandas
+## 📈 Pandas
 
 * DataFrames
 * CSV Handling
@@ -34,7 +41,7 @@ This repository documents my learning journey through Python, SQL, HTML, CSS, an
 * Data Cleaning
 * Data Analysis
 
-### 🗄️ SQL
+## 🗄️ SQL
 
 * SELECT
 * WHERE
@@ -43,51 +50,57 @@ This repository documents my learning journey through Python, SQL, HTML, CSS, an
 * HAVING
 * Aggregate Functions
 * JOINS
-* Mini Company Management Project
+* Database Design
 
-### 🌐 HTML
+## 🌐 HTML5
 
-* HTML Structure
-* Headings & Paragraphs
-* Lists
-* Tables
+* Semantic HTML
 * Forms
+* Tables
 * Images
 * Links
-* Semantic Elements
+* Responsive Structure
 
-### 🎨 CSS
+## 🎨 CSS3
 
-* Inline, Internal & External CSS
-* Selectors (Element, Class, ID)
-* Colors & Fonts
-* Margin & Padding
-* Borders
-* Box Model
 * Flexbox
-* Navigation Bar
-* Hero Section
-* Portfolio Layout
+* Responsive Design
+* Navigation Bars
+* Hero Sections
+* Portfolio Layouts
+* Hover Effects
+* CSS Transitions
 * CSS Animations
-* Transitions
-* Transforms
+* CSS Transforms
 * Box Shadow
 * Progress Bars
 
 ---
 
-## 💼 Projects
+# 💼 Featured Projects
 
-* 📊 Employee Analytics System (Python + Pandas)
-* 🎓 Student Management System (Python)
-* 🗄️ Company Management SQL Project
-* 🌐 Personal Portfolio Website (HTML & CSS)
+### 📊 Employee Analytics System
 
-More real-world projects will be added as I continue my learning journey.
+Python + Pandas project for analyzing employee data, salaries, departments, and experience.
+
+### 🎓 Student Management System
+
+Python project for managing student records using file handling.
+
+### 🗄️ Company Management Database
+
+SQL project demonstrating joins, aggregate functions, and relational database concepts.
+
+### 🌐 Personal Portfolio Website
+
+Designed and developed a fully responsive personal portfolio using HTML and CSS.
+
+**Live Demo:**
+https://paramportfolio-tan.vercel.app/
 
 ---
 
-## 🎯 Current Roadmap
+# 📚 Learning Roadmap
 
 * ✅ Python
 * ✅ NumPy
@@ -95,20 +108,28 @@ More real-world projects will be added as I continue my learning journey.
 * ✅ SQL
 * ✅ HTML
 * ✅ CSS
-* 🔄 Responsive Web Design
+* ✅ Responsive Web Design
 * ⏳ JavaScript
-* ⏳ Flask
+* ⏳ Django
 * ⏳ SQLite
-* ⏳ Full Stack Projects
+* ⏳ REST APIs
+* ⏳ Full Stack Development
 
 ---
 
-## 📈 Current Goal
+# 🎯 Current Goal
 
-Build real-world software projects, strengthen problem-solving skills, and become a skilled Full Stack Software Developer.
+Build production-ready software projects, contribute to open source, and become a skilled Full Stack Software Engineer.
 
 ---
 
-### ⭐ Thank you for visiting my repository!
+# 📫 Connect With Me
 
-I'm continuously learning and updating this repository with new concepts and projects.
+* GitHub: https://github.com/Parammangukiya
+* LinkedIn: https://www.linkedin.com/in/param-mangukiya-8b58b1381
+* Email: [mangukiyaparam11@gmail.com]
+---
+
+⭐ Thank you for visiting my repository!
+
+I'm continuously improving my skills, building new projects, and updating this repository as I learn.
