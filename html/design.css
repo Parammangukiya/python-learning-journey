@@ -228,3 +228,72 @@ html{
     color:#60a5fa;
 
 }
+@media (max-width:768px){
+    .navbar{
+        flex-direction:column;
+    }
+    .menu{
+    flex-direction:column;
+    align-items:center;
+    }
+    .hero{
+    height:auto;
+    padding:60px 20px;
+    }
+    .hero p{
+    font-size:18px;
+    }
+    .about{
+    flex-direction:column;
+    text-align:center;
+    gap:30px;
+    padding:40px;
+    }
+    .project-container{
+    flex-direction:column;
+    align-items:center;
+    }
+    .skills-section{
+    width:90%;
+    }
+    .skills-section h2{
+        font-size:32px;
+    }
+    .skill span{
+        font-size:18px;
+    }
+    .contact-form{
+    width:90%;
+    }
+    .contact{
+    padding:50px 20px;
+    }
+    .contact-form{
+        width:90%;
+    }
+    .contact-form input,
+    .contact-form textarea{
+    font-size:16px;
+    }
+    .footer{
+    padding:30px 15px;
+    }
+    .footer-links{
+        flex-direction:column;
+        gap:15px;
+    }
+    .project-card{
+    width:90%;
+    }
+    .about-image img{
+    width:220px;
+    }
+    .hero button{
+    width:100%;
+    max-width:250px;
+    }
+    .navbar{
+    padding:20px;
+    }
+
+}
