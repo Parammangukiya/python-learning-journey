@@ -2,15 +2,15 @@
 
 Hi, I'm **Param Mangukiya** 👋
 
-I'm a **B.Tech Computer Science & Engineering** student passionate about **Software Development, Artificial Intelligence, Data Analysis, and Full Stack Web Development**.
+I'm a **B.Tech Computer Science & Engineering** student passionate about **Software Development, Backend Development, Artificial Intelligence, Data Analysis, and Full Stack Web Development**.
 
-This repository documents my journey from learning programming fundamentals to building real-world projects. Every topic I complete is followed by practical projects to strengthen my problem-solving and development skills.
+This repository documents my journey of learning programming, building real-world projects, and improving my problem-solving skills. Every technology I learn is followed by practical projects to strengthen my understanding.
 
 ---
 
-# 🌐 Live Portfolio
+# 🌐 Portfolio
 
-**Portfolio Website:**
+### 🔗 Live Portfolio
 https://paramportfolio-tan.vercel.app/
 
 ---
@@ -19,117 +19,264 @@ https://paramportfolio-tan.vercel.app/
 
 ## 🐍 Python
 
-* Python Fundamentals
-* Functions
-* Object-Oriented Programming (OOP)
-* File Handling
-* JSON
-* Exception Handling
-
-## 📊 NumPy
-
-* Arrays
-* Indexing & Slicing
-* Mathematical Operations
-
-## 📈 Pandas
-
-* DataFrames
-* CSV Handling
-* GroupBy
-* Apply & Lambda
-* Data Cleaning
-* Data Analysis
-
-## 🗄️ SQL
-
-* SELECT
-* WHERE
-* ORDER BY
-* GROUP BY
-* HAVING
-* Aggregate Functions
-* JOINS
-* Database Design
-
-## 🌐 HTML5
-
-* Semantic HTML
-* Forms
-* Tables
-* Images
-* Links
-* Responsive Structure
-
-## 🎨 CSS3
-
-* Flexbox
-* Responsive Design
-* Navigation Bars
-* Hero Sections
-* Portfolio Layouts
-* Hover Effects
-* CSS Transitions
-* CSS Animations
-* CSS Transforms
-* Box Shadow
-* Progress Bars
+- Python Fundamentals
+- Data Types & Operators
+- Conditional Statements
+- Loops
+- Functions
+- Object-Oriented Programming (OOP)
+- File Handling
+- Exception Handling
+- JSON
+- Modules & Packages
+- Virtual Environments
 
 ---
 
-# 💼 Featured Projects
+## 📊 NumPy
 
-### 📊 Employee Analytics System
+- Arrays
+- Indexing & Slicing
+- Mathematical Operations
+- Reshaping Arrays
+- Broadcasting
+- Aggregation Functions
 
-Python + Pandas project for analyzing employee data, salaries, departments, and experience.
+---
 
-### 🎓 Student Management System
+## 📈 Pandas
 
-Python project for managing student records using file handling.
+- DataFrames
+- CSV & Excel Handling
+- Data Cleaning
+- Filtering
+- Sorting
+- GroupBy
+- Apply & Lambda Functions
+- Data Analysis
 
-### 🗄️ Company Management Database
+---
 
-SQL project demonstrating joins, aggregate functions, and relational database concepts.
+## 🗄️ SQL
 
-### 🌐 Personal Portfolio Website
+- Database Design
+- SELECT
+- WHERE
+- ORDER BY
+- GROUP BY
+- HAVING
+- Aggregate Functions
+- JOINS
+- Relationships
 
-Designed and developed a fully responsive personal portfolio using HTML and CSS.
+---
 
-**Live Demo:**
+## 🌐 HTML5
+
+- Semantic HTML
+- Forms
+- Tables
+- Images
+- Links
+- Responsive Structure
+
+---
+
+## 🎨 CSS3
+
+- Flexbox
+- Responsive Design
+- Navigation Bars
+- Hero Sections
+- Portfolio Layout
+- Hover Effects
+- Animations
+- Transitions
+- Transforms
+- Box Shadow
+
+---
+
+## ⚙️ Git & GitHub
+
+- Git Basics
+- Commits
+- Branches
+- Repository Management
+- README Documentation
+- Version Control
+
+---
+
+## 🎯 Django
+
+- Django Project Structure
+- Apps
+- URL Routing
+- Views
+- Templates
+- Forms
+- Static Files
+- SQLite Database
+- Django ORM
+- User Authentication
+- Session Authentication
+- Login & Logout
+- Protected Routes
+- SMTP Email Integration
+- HTML Email Templates
+- Email OTP Verification
+- OTP Expiry
+- Resend OTP
+- Session Management
+
+---
+
+# 💼 Projects
+
+## 🔐 Django Authentication System
+
+A production-style authentication system built using Django.
+
+### Features
+
+- User Registration
+- Login & Logout
+- Protected Dashboard
+- Session Authentication
+- HTML Email Templates
+- Gmail SMTP Integration
+- Email OTP Verification
+- OTP Expiry
+- Resend OTP
+- Session-Based Authentication
+
+**Tech Stack**
+
+- Django
+- Python
+- SQLite
+- HTML
+- CSS
+- SMTP
+
+---
+
+## 📊 Employee Analytics System
+
+A Python + Pandas project for analyzing employee data.
+
+### Features
+
+- Salary Analysis
+- Department Reports
+- Experience Analysis
+- Data Cleaning
+- Statistical Insights
+
+---
+
+## 🎓 Student Management System
+
+Console-based Python application.
+
+### Features
+
+- Add Student
+- Update Student
+- Delete Student
+- Search Student
+- File Handling
+
+---
+
+## 🗄️ Company Management Database
+
+SQL project demonstrating relational database concepts.
+
+### Features
+
+- Database Design
+- Joins
+- Aggregate Functions
+- Group By
+- Relationships
+
+---
+
+## 🌐 Personal Portfolio Website
+
+Responsive personal portfolio built using HTML and CSS.
+
+### Live Demo
+
 https://paramportfolio-tan.vercel.app/
 
 ---
 
-# 📚 Learning Roadmap
+# 📚 Learning Progress
 
-* ✅ Python
-* ✅ NumPy
-* ✅ Pandas
-* ✅ SQL
-* ✅ HTML
-* ✅ CSS
-* ✅ Responsive Web Design
-* ⏳ JavaScript
-* ⏳ Django
-* ⏳ SQLite
-* ⏳ REST APIs
-* ⏳ Full Stack Development
+- ✅ Python
+- ✅ Object-Oriented Programming
+- ✅ NumPy
+- ✅ Pandas
+- ✅ SQL
+- ✅ HTML5
+- ✅ CSS3
+- ✅ Responsive Web Design
+- ✅ Git & GitHub
+- ✅ Django Fundamentals
+- ✅ Django Authentication
+- ✅ SMTP Integration
+- ✅ HTML Email Templates
+- ✅ Email OTP Verification
+
+### Currently Learning
+
+- 🔄 Advanced Django
+- 🔄 SQLite
+- 🔄 Django ORM
+
+### Coming Next
+
+- ⏳ JavaScript
+- ⏳ Django REST Framework (DRF)
+- ⏳ REST APIs
+- ⏳ React
+- ⏳ Full Stack Development
 
 ---
 
 # 🎯 Current Goal
 
-Build production-ready software projects, contribute to open source, and become a skilled Full Stack Software Engineer.
+Build production-ready backend applications using Django, master REST APIs, and become a skilled Full Stack Software Engineer through continuous learning and real-world projects.
 
 ---
 
 # 📫 Connect With Me
 
-* GitHub: https://github.com/Parammangukiya
-* LinkedIn: https://www.linkedin.com/in/param-mangukiya-8b58b1381
-* Email: [mangukiyaparam11@gmail.com]
+### GitHub
+
+https://github.com/Parammangukiya
+
+### LinkedIn
+
+https://www.linkedin.com/in/param-mangukiya-8b58b1381
+
+### Portfolio
+
+https://paramportfolio-tan.vercel.app/
+
+### Email
+
+mangukiyaparam11@gmail.com
+
 ---
 
-⭐ Thank you for visiting my repository!
+# ⭐ Thank You
 
-I'm continuously improving my skills, building new projects, and updating this repository as I learn.
+Thank you for visiting my repository!
+
+I'm continuously learning new technologies, building practical projects, and updating this repository as I progress in my software development journey.
+
+If you find this repository helpful, consider giving it a ⭐.
